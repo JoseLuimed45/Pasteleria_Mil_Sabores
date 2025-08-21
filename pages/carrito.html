@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <header role="banner">
@@ -14,10 +20,12 @@
         </div>
 
         <nav aria-label="Navegación principal">
-            <a href="home.html" data-nav>Inicio</a>
-            <a href="catalogo.html" data-nav>Catálogo</a>
-            <a href="index.html" data-nav>Página principal</a>
-            <a href="login.html" data-nav>Ingresar</a>
+            <ul>
+                <li><a href="home.html" data-nav>Inicio</a></li>
+                <li><a href="catalogo.html" data-nav>Catálogo</a></li>
+                <li><a href="index.html" data-nav>Página principal</a></li>
+                <li><a href="login.html" data-nav>Ingresar</a></li>
+            </ul>
         </nav>
     </header>
 </body>
@@ -35,6 +43,7 @@
                     <th scope="col">Tamaño</th>
                     <th scope="col">Extras</th>
                     <th scope="col">Precio</th>
+                    <th scope="col">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -80,9 +89,9 @@
         <p>Diseñado por Héctor Robledo, Jose Luis Medina e Iván Del Pino</p>
         <nav aria-label="Enlaces de pie de página">
             <ul>
-                <li><a href="#privacy">Política de privacidad</a></li>
-                <li><a href="#terms">Términos de servicio</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="privacidad.html">Política de privacidad</a></li>
+                <li><a href="terminos.html">Términos de servicio</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </div>
@@ -94,11 +103,11 @@
             <img src="../images/x-icon.png" alt="x" width="28" height="28">
         </a>
         <a href="https://instagram.com" aria-label="Instagram" target="_blank">
-            <img src="../mages/instagram-icon.png" alt="Instagram" width="28" height="28">
+            <img src="../images/instagram-icon.png" alt="Instagram" width="28" height="28">
         </a>
     </div>
     <div class="footer-legal">
-        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas nuestra <a href="#privacy">política de privacidad</a>.</p>
+        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas nuestra <a href="privacidad.html">política de privacidad</a>.</p>
     </div>
     <div class="footer-back-to-top">
         <a href="#top" class="back-to-top">Volver arriba</a>
