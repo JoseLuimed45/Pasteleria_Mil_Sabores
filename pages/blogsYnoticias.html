@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
+    <title>Blogs y Noticias</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER / NAV -->
     <header role="banner">
         <div class="brand">
             <a href="../index.html"><h1 aria-label="MilSabores">🎂 Mil Sabores</h1></a>
@@ -22,8 +21,8 @@
 
         <nav aria-label="Navegación principal">
             <ul>
+                <li><a href="home.html" data-nav>Inicio</a></li>
                 <li><a href="../index.html" data-nav>Página principal</a></li>
-                <li><a href="blogsYnoticias.html" data-nav>Blogs y noticias</a></li>
                 <li><a href="catalogo.html" data-nav>Catálogo</a></li>
                 <li><a href="carrito.html" data-nav>Carrito</a></li>
                 <li><a href="login.html" data-nav>Ingresar</a></li>
@@ -31,46 +30,48 @@
         </nav>
     </header>
 </body>
-<main id="inicio" tabindex="-1">
-    <!-- Pantalla 1: HOME / LANDING -->
-    <section id="home" class="screen" aria-labelledby="home-title">
-        <h2 id="home-title">🎂 Pastelería Mil Sabores</h2>
-        <p>Bienvenido a nuestra pastelería, donde cada bocado es una celebración de sabor y tradición.</p>
-        <p>Explora nuestro catálogo de deliciosos pasteles y postres artesanales, hechos con amor y dedicación para ti.</p>
-    </section>
-        <form aria-label="Buscador de pasteles" data-screen="home">
-            <label for="q">¿Que te gustaría comer este día?</label>
-            <input id="q" name="q" type="search" placeholder="Buscar pasteles..." aria-label="Buscar pasteles" required>
-            <button type="submit">Buscar</button>
-        </form>
-        <section aria-labelledby="home-destacados-title">
-            <h3 id="home-destacados-title">Destacados de hoy</h3>
-            <ul class="cards" data-test-id="home-destacados">
+
+<main id="blogsYnoticias" tabindex="-1">
+    <section id="catalogo-pasteles" class="screen" aria-labelledby="catalogo-pasteles-title">
+        <h2 id="catalogo-pasteles-title">Blogs y Noticias</h2>
+        <p>Explora nuestras últimas noticias y artículos sobre pastelería y repostería.</p>
+
+        <section aria-labelledby="catalogo-listado-title">
+            <h3 id="catalogo-listado-title">Listado de blogs y noticias</h3>
+            <ul class="grid" data-test-id="catalogo-pasteles">
                 <li>
                     <article>
-                        <h4>Pastel Mil hojas</h4>
-                        <p>Postre francés hecho de hojaldre con capas de crema pastelera</p>
-                        <a href="pastelMilHojas.html" data-action="ver-detalle" data-id="DS101">Ver detalle</a>
+                        <header>
+                            <h3>Ranking destaca a las empanadas chilenas entre los mejores platos   de pastelería salada del mundo</h3>
+                        </header>
+                        <p>El prestigioso medio culinario TasteAtlas publicó su ranking con los cien mejores platos de pastelería salada 
+                            del planeta en 2025, figurando, entre ellos, un clásico de la gastronomía chilena. En concreto, se trata de las 
+                            "empanadas chilenas" que, con una nota promedio de 4,2 estrellas (de cinco máximas), se posicionan en el lugar 34 
+                            del mundo. El ranking es liderado por el Pazarske mantije, originario de la ciudad de Novi Pazar en Serbia, 
+                            que obtuvo una calificación de 4,7 estrellas.</p>
+                        <footer>
+                            <a href="https://www.diarioelheraldo.cl/noticia/ranking-destaca-a-las-empanadas-chilenas-entre-los-mejores-platos-de-pasteleria-salada-del-mundo" data-action="ver-detalle" data-id="DS101">Ver más</a>
+                        </footer>
                     </article>
                 </li>
                 <li>
                     <article>
-                        <h4>Pastel Tres Leches</h4>
-                        <p>postre tradicional latinoamericano. Consiste en un bizcocho bañado con tres tipos de lácteo: leche evaporada, media crema y leche condensada</p>
-                        <a href="pastelTresLeches.html" data-action="ver-detalle" data-id="DS102">Ver detalle</a>
+                        <header>
+                            <h3>Café de especialidad, pastelería artesanal y pastificio en el corazón de Colegiales</h3>
+                        </header>
+                        <p>En línea con su restaurante Biasatti, los chefs Milton Bertoni y Stefanía Langford presentan un nuevo local, 
+                            donde se puede desayunar y merendar mientras se observa el trabajo de la fábrica de pastas a la vista.</p>
+                        <footer>
+                            <a href="https://www.ambito.com/lifestyle/cafe-especialidad-pasteleria-artesanal-y-pastificio-el-corazon-colegiales-n6181684" data-action="ver-detalle" data-id="DS101">Ver más</a>
+                        </footer>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h4>Pastel de Chocolate</h4>
-                        <p>Delicioso pastel de chocolate con relleno de crema de chocolate y cobertura de ganache</p>
-                        <a href="pastelChocolate.html" data-action="ver-detalle" data-id="DS103">Ver detalle</a>
-                    </article>
-                </li>
+                
             </ul>
         </section>
     </section>
 </main>
+
 <footer role="contentinfo" aria-label="Pie de página" class="footer" id="footer" tabindex="-1">
     <div class="footer-content">
         <p>&copy; 2025 Pastelería Mil Sabores. Todos los derechos reservados.</p>
