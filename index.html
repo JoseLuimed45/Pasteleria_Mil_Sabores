@@ -55,10 +55,57 @@
             <p>¡Gracias por elegirnos para endulzar tu vida!</p>
         </section>
 
+        <!-- BUSCADOR -->
+        <section aria-labelledby="buscador-title">
+            <h2 id="buscador-title">Inicio</h2>
+
+            <p>Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora
+                nuestro catálogo y descubre las delicias que tenemos para ti.</p>
+
+            <form aria-label="Buscador de productos" data-screen="home">
+                <label for="q">¿Qué estás buscando?</label>
+                <input id="q" name="q" type="search" placeholder="Buscar productos...">
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
         <!-- DESTACADOS -->
         <section aria-labelledby="home-destacados-title">
             <h3 id="home-destacados-title">Destacados de hoy</h3>
-            <ul class="cards" data-testid="home-destacados">
+            <ul class="cards" data-testid="home-destacados"></ul>
+        </section>
+        <!--Pantalla: 2 Catalogo -->
+        <!-- CATALOGO -->
+        <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
+            <h2 id="catalogo-title">Catálogo de pasteles</h2>
+            <aside aria-label="Filtros">
+                <form data-screen="catalogo-filtro">
+                    <fieldset>
+                        <legend>Categorías</legend>
+                        <label><input type="checkbox" name="cat" id="tortas-cuadradas"/> Tortas Cuadradas</label>
+                        <label><input type="checkbox" name="cat" id="tortas-circulares"/> Tortas Circulares</label>
+                        <label><input type="checkbox" name="cat" id="postres-individuales"/> Postres Individuales</label>
+                        <label><input type="checkbox" name="cat" id="productos-sin-azucar"/> Productos Sin Azúcar</label>
+                        <label><input type="checkbox" name="cat" id="pasteleria-tradicional"/> Pastelería Tradicional</label>
+                        <label><input type="checkbox" name="cat" id="productos-sin-gluten"/> Productos sin gluten</label>
+                        <label><input type="checkbox" name="cat" id="productos-veganos"/> Productos Veganos</label>
+                        <label><input type="checkbox" name="cat" id="tortas-especiales"/> Tortas Especiales</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Tipo</legend>
+
+                        <select name="tipo-pastel" id="tipo-pastel">
+                            <option>Seleccione una opción</option>
+                            <option value="pasteleria-tradicional">Pastelería Tradicional</option>
+                            <option value="postres-individuales">Postres Individuales</option>
+                            <option value="productos-sin-azucar">Productos Sin Azúcar</option>
+                            <option value="tortas-circulares">Tortas Circulares</option>
+                            <option value="tortas-cuadradas">Tortas Cuadradas</option>
+                            <option value="tortas-especiales">Tortas Especiales</option>
+                        </select>
+                    </fieldset>
+            <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y amor. </p>
+        </section>
                 <li>
                     <article>
                         <h4>Torta Cuadrada de Chocolate</h4>
@@ -178,70 +225,6 @@
             </ul>
         </section>
 
-        <!-- BUSCADOR -->
-        <section aria-labelledby="buscador-title">
-            <h2 id="buscador-title">Inicio</h2>
-
-            <p>Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora
-                nuestro catálogo y descubre las delicias que tenemos para ti.</p>
-
-            <p>Bienvenido a Pasteleria Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora nuestro cataloged y descubre las delicias que tenemos para ti.</p>
-            <form aria-label="Buscador de productos" data-screen="home">
-                <label for="q">¿Qué estás buscando?</label>
-                <input id="q" name="q" type="search" placeholder="Buscar productos...">
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
-        <!--Pantalla: 2 Catalogo -->
-        <!-- CATALOGO -->
-        <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
-            <h2 id="catalogo-title">Catálogo de pasteles</h2>
-
-            <aside aria-label="Filtros">
-                <form data-screen="catalogo-filtro">
-                    <fieldset>
-                        <legend>Categorías</legend>
-                        <label><input type="checkbox" name="cat" id="tortas-cuadradas"/> Tortas Cuadradas</label>
-                        <label><input type="checkbox" name="cat" id="tortas-circulares"/> Tortas Circulares</label>
-                        <label><input type="checkbox" name="cat" id="postres-individuales"/> Postres Individuales</label>
-                        <label><input type="checkbox" name="cat" id="productos-sin-azucar"/> Productos Sin Azúcar</label>
-                        <label><input type="checkbox" name="cat" id="pasteleria-tradicional"/> Pastelería Tradicional</label>
-                        <label><input type="checkbox" name="cat" id="productos-sin-gluten"/> Productos sin gluten</label>
-                        <label><input type="checkbox" name="cat" id="productos-veganos"/> Productos Veganos</label>
-                        <label><input type="checkbox" name="cat" id="tortas-especiales"/> Tortas Especiales</label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Tipo</legend>
-                        <label for="tipo-pastel">Tipo</label>
-                        <select name="tipo-pastel" id="tipo-pastel">
-                            <option>Seleccione una opción</option>
-                            <option value="pasteleria-tradicional">Pastelería Tradicional</option>
-                            <option value="postres-individuales">Postres Individuales</option>
-                            <option value="productos-sin-azucar">Productos Sin Azúcar</option>
-                            <option value="tortas-circulares">Tortas Circulares</option>
-                            <option value="tortas-cuadradas">Tortas Cuadradas</option>
-                            <option value="tortas-especiales">Tortas Especiales</option>
-                        </select>
-            <h2 id="catalgo-title">Catalogo de pasteles</h2>
-
-            <aside aria-label="Filtros">
-                <form data-screen="catalago-filtro">
-                    <fieldset>
-                        <legend>Categorías</legend>
-                        <label><input type="checkbox" name="cat" id="Tortas Cuadradas "/></label>
-                        <label><input type="checkbox" name="cat" id="Tortas Circulares "/></label>
-                        <label><input type="checkbox" name="cat" id="Postres Individuales "/></label>
-                        <label><input type="checkbox" name="cat" id="Productos Sin Azúcar "/></label>
-                        <label><input type="checkbox" name="cat" id="Pastelería Tradicional "/></label>
-                        <label><input type="checkbox" name="cat" id="Productos sin gluten "/></label>
-                        <label><input type="checkbox" name="cat" id="Productos Vegana "/></label>
-                        <label><input type="checkbox" name="cat" id="Tortas Especiales  "/></label>
-                    </fieldset>
-                </form>
-            </aside>
-            <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y amor.
-            </p>
-        </section>
 
         <!-- CARRITO -->
         <section id="carrito">
