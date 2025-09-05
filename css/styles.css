@@ -1,0 +1,150 @@
+/*DreamSwap - Style.css
+Hoja de estilo base y componentes para el prototipo de HTML
+-Paleta de colores: https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
+-Tipografía: https://fonts.google.com/specimen/Poppins
+-
+*/
+/*RESET + VARIABLE*/
+:root {
+    --text-secondary: #B0BEC5;
+    --bg: #FFF5E1; /* Fondo*/
+    --bg-2: #FFF5E5;
+    --surface: #5D4037;
+    --surface-2: #1a2130;
+    --text: #5D4037;
+    --text-2:#ebe4e4;
+    --accent: #FFC0CB;
+    --accent-2: #8B4513;
+    --muted: #888888;
+    --border: #2a9d8f;
+    --success: #4caf50;
+    --warning: #ff5c00;
+    --danger: #f44336;
+    --radius:#ff5c8a;
+    --shadow : rgba(0, 0, 0, 0.5);
+    --font-sans: 'Lato', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-heading: 'Pacifico', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+}
+/*Etiqueta HTML*/
+ *{box-sizing: border-box;}
+html, body { height: 100%; margin: 0; font-family: var(--font-sans); background-color: var(--bg); color: var(--text);  }
+html {
+    margin: 0;
+    font-family: var(--font-sans);
+background:
+radial-gradient(1200px 800px at 20% -10%, rgba(124, 92, 255, .15), transparent),
+radial-gradient(1200px 800px at 120% 10%, rgba(56, 230, 214, .10), transparent),
+var(--bg-2);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+img { max-width: 100%; display: block; }
+input, button, textarea, select { font: inherit; color: inherit;}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top:auto;
+    width: 1px;
+    height: 1px;
+    background: var(--accent);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+    z-index: 100;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: .5em 1em;
+    background: var(--accent);
+    color: white;
+    left: 10px;
+    top: 10px;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}
+header [role="banner"] {
+    position: sticky;
+    top: 0; z-index: 50;display: grid; gap: .5rem; align-items: center;
+    grid-template-columns: 1fr; padding: 1rem;
+    background: linear-gradient(0deg, rgba(18,24,35, .7) rgba(18,24,35, .7));
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--border);
+}
+
+header .brand h1 {
+    margin: 0; font-size: 1.5rem; }
+header .brand .tagline { margin: .125rem 0 0; color: var(--text-secondary); font-size: .9rem; }
+
+header nav ul {
+    margin: .5rem 0 0; padding: 0; list-style: none;
+    display: flex; flex-wrap: wrap; gap: .5rem;
+    /*justify-content: center;*/
+}
+header nav a {
+    text-decoration: none; color: var(--text);
+    padding: .5rem .75rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: background-color .2s, border-color .2s;
+}
+header nav a:hover{
+    background: var(--surface-2);
+    border-color: var(--accent);
+    color: white;
+}
+main {
+    width: min(100%, 1200px);margin: 0 auto; padding: 1.25rem;}
+.screen h2{
+    margin-top: 0;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    padding: clamp(1rem, 2vw, 2rem);
+    background: linear-gradient(180deg, rgba(239, 240, 241, 0.75), rgba(239, 240, 241, 0.75));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.screen h3{
+    margin-top: 0;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    padding: clamp(1.15rem, 2vw, 2rem);
+    background: linear-gradient(180deg, rgba(239, 240, 241, 0.75), rgba(239, 240, 241, 0.75));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+.meta {
+    color: var(--muted);
+    margin-bottom: .99em;
+}
+/*==================================================
+CARDS & LISTADOS
+==================================================*/
+
+.card, grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+/*==================================================
+FORMULARIOS==================================================*/
+
+/*==================================================
+TABLAS (Carrito de compras, Fidelización)
+==================================================*/
+
+/*==================================================
+COMPONENTES ESPECIFICOS ► Progreso de estado(Tracking)
+==================================================*/
+
+
+
+/*==================================================
+FOOTER
+==================================================*/
