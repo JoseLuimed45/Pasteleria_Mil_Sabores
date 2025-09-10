@@ -48,6 +48,9 @@ var(--bg-2);
 img { max-width: 100%; display: block; }
 input, button, textarea, select { font: inherit; color: inherit;}
 
+.centrado {
+    text-align: center;
+}
 .skip-link {
     position: absolute;
     left: -9999px;
