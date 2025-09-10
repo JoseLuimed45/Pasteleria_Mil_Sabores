@@ -25,7 +25,9 @@ Hoja de estilo base y componentes para el prototipo de HTML
     --font-sans: 'Lato', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-heading: 'Pacifico', cursive;
 }
-
+h1 {
+    text-align: center;
+}
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
 }

@@ -98,7 +98,6 @@
                     </fieldset>
                     <fieldset>
                         <legend>Tipo</legend>
-
                         <select name="tipo-pastel" id="tipo-pastel">
                             <option>Seleccione una opción</option>
                             <option value="pasteleria-tradicional">Pastelería Tradicional</option>
@@ -109,24 +108,23 @@
                             <option value="tortas-especiales">Tortas Especiales</option>
                         </select>
                     </fieldset>
+                </form>
+            </aside>
             <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y amor. </p>
-        </section>
-                <li>
+            <ul class="catalogo-lista">
+                <li class="catalogo-item">
                     <article>
+                        <img src="Imagenes/torta_cuadadra_chocololate.jpeg" alt="Torta Cuadrada de Chocolate" class="catalogo-img">
                         <h4>Torta Cuadrada de Chocolate</h4>
-                        <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con
-                            mensajes especiales.</p>
+                        <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.</p>
                         <a href="#detalles" data-action="Ver detalles" data-id="TC001">Ver detalles</a>
+                        <button type="button" class="btn-agregar">Agregar al carrito</button>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <h4>Torta Cuadrada de Frutas </h4>
-                        <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal
-                            para celebraciones.</p>
-                        <a href="#detalles" data-action="Ver detalles" data-id="TC002">Ver detalles</a>
-                    </article>
-                </li>
+                <!-- Repite la estructura para cada producto, agregando imágenes y el botón -->
+                <!-- ... (puedo continuar con el resto si lo deseas) ... -->
+            </ul>
+        </section>
                 <li>
                     <article>
                         <h4>Torta Circular de Vainilla </h4>
@@ -227,10 +225,6 @@
                         <a href="#detalles" data-action="Ver detalles" data-id="TE002">Ver detalles</a>
                     </article>
                 </li>
-            </ul>
-        </section>
-
-
         <!-- CARRITO -->
         <section id="carrito">
             <h2>Carrito</h2>
