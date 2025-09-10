@@ -1,0 +1,16 @@
+:root{
+    --accent: #FFC0CB;
+    --accent-2: #8B4513;
+}
+body {background: linear-gradient(#0b0b0b, #121823);color: #e6ecf2;}
+.bg-custom{background: rgba(18, 24, 35,.75); border: 1px solid #243042;}
+.tetx-muted{color: #aab7c4 !important;}
+a{color:var(--accent-2);}
+.bg-ds{background: linear-gradient(90deg,var(--accent-2),var(--ds-accent-2));border: 0; color: #000b0f14; font-weight: 700; }
+.card{background: linear-gradient(90deg, var(--accent-2), var(--ds-accent-2)); border: 0; color: #000b0f14; font-weight: 700; }
+.table{color: antiquewhite;}
+.table thead{background: var(--accent-2); color: white;}
+.table> :not(caption)>*>{background: transparent;border-color: aqua;}
+.form-control::placeholder{color: 8aa1b7;}
+.navbar{background: rgba(139, 69, 19, 0.8); backdrop-filter: blur(6px); border-bottom: 1px solid #243042;}
+.section-gap{padding-bottom: 2rem 0;}
