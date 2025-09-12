@@ -315,42 +315,24 @@
           </article>
         </li>
       </ul>
-    </section>
 
-
-    <p>
-      Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno
-      hecho con ingredientes frescos y amor.
-    </p>
-
-    <div class="controls">
-      <input id="search" type="search" placeholder="Buscar producto..." aria-label="Buscar producto" />
-      <select id="filter-category" aria-label="Filtrar por categoría">
-        <option value="all">Todas las categorías</option>
-        <option value="Tortas Cuadradas">Tortas Cuadradas</option>
-        <option value="Tortas Circulares">Tortas Circulares</option>
-        <option value="Postres Individuales">Postres Individuales</option>
-        <option value="Sin Azúcar">Productos Sin Azúcar</option>
-        <option value="Sin Gluten">Productos Sin Gluten</option>
-        <option value="Vegana">Productos Vegana</option>
-        <option value="Tortas Especiales">Tortas Especiales</option>
-      </select>
-    </div>
-
-    <div id="product-grid" class="product-grid" aria-live="polite"></div>
-
-    <ul class="cards" data-testid="catalogo">
-      <li>
-        <article>
-          <h4>Torta Cuadrada de Chocolate</h4>
-          <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.</p>
-          <strong>$45.000 CLP</strong>
-          <a href="#detalles" data-id="TC001">Ver detalles</a>
-        </article>
-      </li>
-
-      <!-- Aquí irían los productos (li + article) -->
-    </ul>
+      <!-- Controles de búsqueda y filtrado para catálogo -->
+      <div class="controls">
+        <input id="search" type="search" placeholder="Buscar producto..." aria-label="Buscar producto" />
+        <select id="filter-category" aria-label="Filtrar por categoría">
+          <option value="all">Todas las categorías</option>
+          <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+          <option value="Tortas Circulares">Tortas Circulares</option>
+          <option value="Postres Individuales">Postres Individuales</option>
+          <option value="Sin Azúcar">Productos Sin Azúcar</option>
+          <option value="Sin Gluten">Productos Sin Gluten</option>
+          <option value="Vegana">Productos Vegana</option>
+          <option value="Tortas Especiales">Tortas Especiales</option>
+        </select>
+      </div>
+      <!-- Catálogo dinámico -->
+      <div id="product-grid" class="product-grid" aria-live="polite"></div>
+      <!-- Fin catálogo -->
     </section>
 
     <!-- CARRITO -->
