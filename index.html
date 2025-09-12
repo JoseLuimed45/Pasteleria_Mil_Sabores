@@ -8,10 +8,10 @@
   <meta name="description" content="Trabajo Página web de una pastelería" />
 
   <!-- Nota: Solo HTML. CSS/JS se agregará en etapas siguientes -->
-  <link rel="stylesheet" href="<link href=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous">">
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-...tu-integrity..." crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <!--Estilos minimos de animacion opcionales -->
   <link rel="stylesheet" href="css/styles-custum.css" />
 
@@ -26,92 +26,132 @@
     class="skip-link">Saltar al contenido</a>
   <script src="script.js"></script>
 
-  <!-- HEADER / NAV -->
-  <header role="banner" style="background-color: hsl(13, 16%, 89%); padding: 1rem">
-    <div class="brand">
-      <h1 aria-label="Pastelería Mil Sabores">Pastelería Mil Sabores</h1>
-      <p class="tagline">
-        Donde el dulzor de nuestros sabores será inolvidable
-      </p>
+  <!--HEADER / NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top" aria-label="Navegacion principal" style="background-color: #FFF5E1;">
+    <div class="container">
+      <div class="brand">
+        <h1 aria-label=" Pastelería Mil Sabores">Pastelería Mil Sabores</h1>
+        <div class="col text-center">
+          <img src="Imagenes/PasteleriaMilSabores.png" class="img-fluid rounded-3 mx-auto d-block logo-img"
+            alt="Logo Pastelería Mil Sabores" />
+        </div>
+        <p class="tagline">Donde el dulzor de nuestros sabores será inolvidable</p>
+      </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNAV"
+        aria-controls="mainNAV" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">☰</span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNAV" aria-label="Menu Principal">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link text-dark" href="#home" data-nav>Inicio</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#catalogo" data-nav>Catálogo</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#carrito" data-nav>Carrito</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#perfil" data-nav>Perfil</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#blog" data-nav>Sus Mejores Recetas</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#fidelizacion" data-nav>Créditos REM</a></li>
+          <li class="nav-item"><a class="nav-link text-dark" href="#ingresar" data-nav>Ingresar</a></li>
+        </ul>
+        <button id="cart-btn" aria-label="Ver carrito">
+          🧺 <span id="cart-count">0</span>
+        </button>
+      </div>
     </div>
-
-    <nav aria-label="Menu Principal">
-      <ul>
-        <li><a href="#home" data-nav>Inicio</a></li>
-        <li><a href="#catalogo" data-nav>Catálogo</a></li>
-        <li><a href="#carrito" data-nav>Carrito</a></li>
-        <li><a href="#perfil" data-nav>Perfil</a></li>
-        <li><a href="#blog" data-nav>Sus Mejores Recetas</a></li>
-        <li><a href="#fidelizacion" data-nav>Créditos REM</a></li>
-        <li><a href="#ingresar" data-nav>Ingresar</a></li>
-      </ul>
-    </nav>
-
-    <button id="cart-btn" aria-label="Ver carrito">
-      🧺 <span id="cart-count">0</span>
-    </button>
-  </header>
+  </nav>
 
   <!-- MAIN -->
-  <main id="contenido" tabindex="-1">
-    <!-- HOME -->
-    <section id="home" class="screen" aria-labelledby="home-title">
-      <h2 id="home-title" class="centrado">
-        Bienvenidos a Pastelería Mil Sabores
-      </h2>
-      <h4>✨ Misión</h4>
-      <p>
-        Ofrecer una experiencia dulce y memorable a nuestros clientes,
-        proporcionando tortas y productos de repostería de alta calidad para
-        todas las ocasiones, mientras celebramos nuestras raíces históricas y
-        fomentamos la creatividad en la repostería.
-      </p>
+  <main id="contenido" class="container my-4">
+    <!-- HOME / LANDING-->
+    <section id="home" class="section-gap">
+      <div class=row g-4 align-items-center>
+        <!-- BUSCADOR-->
+        <div class="col-12 col-lg-7">
+          <h3 class="display-5 fw-bold">Bienvenidos a Pastelería Mil Sabores</h3>
+          <p class="lead text-muted">
+            En Pastelería Mil Sabores, nos enorgullece ofrecer una amplia
+            variedad de tortas y productos de repostería que combinan tradición
+            e innovación. Nuestra historia se remonta a más de 20 años, cuando
+            comenzamos como una pequeña pastelería familiar en el corazón de
+            Santiago, Chile. Desde entonces, hemos crecido y evolucionado,
+            manteniendo siempre nuestro compromiso con la calidad y el sabor.</p>
+          <form class="row g-2 mt-3" aria-label="Buscador de productos">
+            <div class="col-12 col-sm-9">
+              <label class="form-label" for="q">¿Qué estás buscando?</label>
+              <input class="form-control" id="q" name="q" type="search" placeholder="Buscar productos..." />
+            </div>
+            <div class="col-12 col-sm-3 d-grid align-self-end">
+              <button type="submit" class="btn btn-ds">Buscar</button>
+            </div>
+          </form>
+          <div>
+            <!-- DESTACADOS -->
+          </div>
+          <h2 id="home-destacados-title">Destacados de hoy</h2>
+          <ul class="cards" data-testid="home-destacados"></ul>
+        </div>
+        <div class="col-12 col-lg-7">
+          <div class="p-4 rounded-4 ds card">
+            <h2 class="h5">Torta de Tres Leches</h2>
+            <div class="card-body">
+              <h4 class="card-title h6 text-chocolate">¡Nuestro producto estrella!</h4>
+            </div>
+            <div class="row row-cols-1 row-cols-md-2 g-3">
+              <div class="col">
+                <img src="Imagenes/Tres-Leches-2024.png" class="img-fluid rounded-3" alt="Torta de Tres Leches" />
+              </div>
+              <div class="col">
 
-      <h4>🎯 Visión</h4>
-      <p>
-        Convertirnos en la tienda online líder de productos de repostería en
-        Chile, conocida por nuestra innovación, calidad y el impacto positivo
-        en la comunidad, especialmente en la formación de nuevos talentos en
-        gastronomía.
-      </p>
+                <p>Una deliciosa torta esponjosa empapada en una mezcla de tres tipos de leche, cubierta con crema
+                  batida y decorada con frutas frescas. Perfecta para cualquier celebración.</p>
+                <a class="btn btn-sm btn-ds text-chocolate" href="#detalles" data-id="TT003">Ver detalles</a>
+                <strong>$35.000 CLP</strong>
+                <br />
+                <button class="btn btn-primary mt-2" data-id="TT003">Agregar al carrito</button>
+              </div>
 
-      <p>
-        Explora nuestro catálogo en línea para descubrir una variedad de
-        opciones que se adaptan a tus gustos y necesidades. Además, ofrecemos
-        servicios de entrega para que puedas disfrutar de nuestros productos
-        desde la comodidad de tu hogar.
-      </p>
+            </div>
 
-      <p>
-        Únete a nuestra comunidad y suscríbete a nuestro blog para recibir las
-        mejores recetas y consejos de repostería directamente en tu bandeja de
-        entrada. En Pastelería Mil Sabores, estamos comprometidos a hacer que
-        cada ocasión sea inolvidable con el dulzor de nuestros sabores.
-      </p>
+          </div>
+        </div>
 
-      <p>¡Gracias por elegirnos para endulzar tu vida!</p>
-    </section>
+        <h2 class="display-5 fw-bold">Nuestra Historia</h2>
+        <p class="lead text-muted">
+          A lo largo de los años, hemos perfeccionado nuestras recetas y
+          técnicas, inspirándonos en las tradiciones culinarias de Chile y del
+          mundo. Nuestro equipo de reposteros apasionados trabaja con dedicación
+          para crear productos que no solo son deliciosos, sino también visualmente
+          atractivos.
 
-    <!-- BUSCADOR -->
-    <section aria-labelledby="buscador-title">
-      <h2 class="centrado" id="buscador-title">Inicio</h2>
-      <p>
-        Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros
-        sabores será inolvidable. Explora nuestro catálogo y descubre las
-        delicias que tenemos para ti.
-      </p>
+        <h3>✨ Misión</h3>
+        <p>
+          Ofrecer una experiencia dulce y memorable a nuestros clientes,
+          proporcionando tortas y productos de repostería de alta calidad para
+          todas las ocasiones, mientras celebramos nuestras raíces históricas y
+          fomentamos la creatividad en la repostería.
+        </p>
 
-      <form aria-label="Buscador de productos" data-screen="home">
-        <label for="q">¿Qué estás buscando?</label>
-        <input id="q" name="q" type="search" placeholder="Buscar productos..." />
-        <button type="submit">Buscar</button>
-      </form>
-    </section>
+        <h3>🎯 Visión</h3>
+        <p>
+          Convertirnos en la tienda online líder de productos de repostería en
+          Chile, conocida por nuestra innovación, calidad y el impacto positivo
+          en la comunidad, especialmente en la formación de nuevos talentos en
+          gastronomía.
+        </p>
 
-    <!-- DESTACADOS -->
-    <section aria-labelledby="home-destacados-title">
-      <h3 id="home-destacados-title">Destacados de hoy</h3>
-      <ul class="cards" data-testid="home-destacados"></ul>
+        <p>
+          Explora nuestro catálogo en línea para descubrir una variedad de
+          opciones que se adaptan a tus gustos y necesidades. Además, ofrecemos
+          servicios de entrega para que puedas disfrutar de nuestros productos
+          desde la comodidad de tu hogar.
+        </p>
+
+        <p>
+          Únete a nuestra comunidad y suscríbete a nuestro blog para recibir las
+          mejores recetas y consejos de repostería directamente en tu bandeja de
+          entrada. En Pastelería Mil Sabores, estamos comprometidos a hacer que
+          cada ocasión sea inolvidable con el dulzor de nuestros sabores.
+        </p>
+
+        <p>¡Gracias por elegirnos para endulzar tu vida!</p>
     </section>
 
     <!-- CATALOGO -->
@@ -145,7 +185,8 @@
         <li>
           <article>
             <h4>Torta Circular de Vainilla</h4>
-            <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para
+            <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto
+              para
               cualquier ocasión.</p>
             <strong>$40.000 CLP</strong>
             <a href="#detalles" data-id="TT001">Ver detalles</a>
@@ -185,7 +226,8 @@
         <li>
           <article>
             <h4>Torta Sin Azúcar de Naranja</h4>
-            <p>Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.</p>
+            <p>Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.
+            </p>
             <strong>$48.000 CLP</strong>
             <a href="#detalles" data-id="PSA001">Ver detalles</a>
           </article>
@@ -388,6 +430,37 @@
         <button id="checkout" class="btn primary">Pagar</button>
       </div>
     </aside>
+    <footer role="contentinfo" aria-label="Pie de página" class="footer" id="footer" tabindex="-1">
+      <div class="footer-content">
+        <p>&copy; 2025 Pastelería Mil Sabores. Todos los derechos reservados.</p>
+        <p>Diseñado por Héctor Robledo, Jose Luis Medina e Iván Del Pino</p>
+        <nav aria-label="Enlaces de pie de página">
+          <ul>
+            <li><a href="pages/privacidad.html">Política de privacidad</a></li>
+            <li><a href="pages/terminos.html">Términos de servicio</a></li>
+            <li><a href="pages/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer-social">
+        <a href="https://facebook.com" aria-label="Facebook" target="_blank">
+          <img src="images/facebook-icon.png" alt="Facebook" width="28" height="28">
+        </a>
+        <a href="https://x.com" aria-label="x" target="_blank">
+          <img src="images/x-icon.png" alt="x" width="28" height="28">
+        </a>
+        <a href="https://instagram.com" aria-label="Instagram" target="_blank">
+          <img src="images/instagram-icon.png" alt="Instagram" width="28" height="28">
+        </a>
+      </div>
+      <div class="footer-legal">
+        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. Al continuar navegando, aceptas
+          nuestra <a href="privacidad.html">política de privacidad</a>.</p>
+      </div>
+      <div class="footer-back-to-top">
+        <a href="#top" class="back-to-top">Volver arriba</a>
+      </div>
+    </footer>
 </body>
 
 </html>

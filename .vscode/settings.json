@@ -173,5 +173,6 @@
                 "utiliza",
                 "variedad",
                 "visualmente"
-        ]
+        ],
+        "commentTranslate.hover.enabled": true
 }
