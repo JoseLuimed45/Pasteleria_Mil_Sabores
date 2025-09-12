@@ -2,7 +2,7 @@
     --accent: #FFC0CB;
     --accent-2: #8B4513;
 }
-body {background: linear-gradient(#0b0b0b, #121823);color: #e6ecf2;}
+body {background: linear-gradient(#FFF5E1, #FFF5E1);color: #8B4513;}
 .bg-custom{background: rgba(18, 24, 35,.75); border: 1px solid #243042;}
 .tetx-muted{color: #aab7c4 !important;}
 a{color:var(--accent-2);}
