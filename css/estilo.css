@@ -256,26 +256,26 @@ aside[aria-label="Filtros"] select {
 /*11. Pie de página -Botón reutilizable (carrito, acciones)*/
 .btn {
   background-color: var(--acento-rosa);
-  color: #fff5e1
-
-/* 🧁 Tarjetas del catálogo de productos */
+  color: #fff5e1;
+}
+/*Tarjetas del catálogo de productos */
 
 /* Precio del producto */
 .precio {
-  font-weight: bold;                     /* Resalta el precio */
-  color: var(--acento-chocolate);        /* Usa el color chocolate como acento */
-  margin: 0.5rem 0;                      /* Espaciado vertical para separar del resto del contenido */
+  font-weight: bold; /* Resalta el precio */
+  color: var(--acento-chocolate); /* Usa el color chocolate como acento */
+  margin: 0.5rem 0; /* Espaciado vertical para separar del resto del contenido */
 }
 
 /* Contenedor del artículo (tarjeta) */
 li article {
-  display: flex;                         /* Usa flexbox para organizar el contenido verticalmente */
-  flex-direction: column;               /* Apila los elementos de arriba hacia abajo */
+  display: flex; /* Usa flexbox para organizar el contenido verticalmente */
+  flex-direction: column; /* Apila los elementos de arriba hacia abajo */
 }
 
 /* Enlace de acción dentro de la tarjeta */
 li article a {
-  margin-top: auto;                     /* Empuja el botón hacia el fondo de la tarjeta */
+  margin-top: auto; /* Empuja el botón hacia el fondo de la tarjeta */
 }
 /*Estilo del carrito */
 #carrito {
@@ -331,7 +331,7 @@ li article a {
   margin-top: 2rem;
 }
 
-/* 🧾 Formulario de perfil */
+/*Formulario de perfil */
 #form-perfil {
   display: flex;
   flex-direction: column;
