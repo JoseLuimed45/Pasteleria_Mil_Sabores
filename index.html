@@ -173,11 +173,11 @@
 
 
             <!-- BUSCADOR -->
-            <section aria-labelledby="buscador-title">
+            <section aria-labelledby="Encuentra tu favorito">
                 <h2 id="buscador-title">Inicio</h2>
                 <p>Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora
                     nuestro catálogo y descubre las delicias que tenemos para ti.</p>
-                <form aria-label="Buscador de productos" data-screen="home" action="#catalago" method="get">
+                <form aria-label="Buscador de productos" data-screen="home" action="#catalogo" method="get">
                     <label for="q">¿Qué estás buscando?</label>
                     <input id="q" name="q" type="search" placeholder="Buscar productos..."
                         aria-describedby="buscador-ayuda">
@@ -185,33 +185,41 @@
                 </form>
                 <p id="buscador-ayuda" class="texto-secundario">Escribe el nombre de un producto o categoría.</p>
             </section>
-            <!--Pantalla: 2 Catalogo -->
-            <!-- CATALOGO -->
-            <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
-                <h2 id="catalogo-title">Catálogo de pasteles</h2>
 
+            <!--Pantalla 2: Catalogo -->
+            <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
+                <h2 id="catalogo-title">Catálogo de Productos</h2>
+
+                <!-- FILTROS -->
                 <aside aria-label="Filtros">
                     <form data-screen="catalogo-filtro">
+
+                        <!-- Filtros por Categoría y Tipo -->
                         <fieldset>
                             <legend>Categorías</legend>
-                            <label><input type="checkbox" name="cat" id="tortas-cuadradas" /> Tortas Cuadradas</label>
-                            <label><input type="checkbox" name="cat" id="tortas-circulares" /> Tortas Circulares</label>
-                            <label><input type="checkbox" name="cat" id="postres-individuales" /> Postres
+                            <label><input type="checkbox" name="categoria" id="tortas-circulares" /> Tortas
+                                Circulares</label>
+                            <label><input type="checkbox" name="categoria" id="tortas-cuadradas" /> Tortas
+                                Cuadradas</label>
+                            <label><input type="checkbox" name="categoria" id="postres-individuales" /> Postres
                                 Individuales</label>
-                            <label><input type="checkbox" name="cat" id="productos-sin-azucar" /> Productos Sin
+                            <label><input type="checkbox" name="categoria" id="productos-sin-azucar" /> Productos Sin
                                 Azúcar</label>
-                            <label><input type="checkbox" name="cat" id="pasteleria-tradicional" /> Pastelería
+                            <label><input type="checkbox" name="categoria" id="pasteleria-tradicional" /> Pastelería
                                 Tradicional</label>
-                            <label><input type="checkbox" name="cat" id="productos-sin-gluten" /> Productos sin
+                            <label><input type="checkbox" name="categoria" id="productos-sin-gluten" /> Productos sin
                                 gluten</label>
-                            <label><input type="checkbox" name="cat" id="productos-veganos" /> Productos Veganos</label>
-                            <label><input type="checkbox" name="cat" id="tortas-especiales" /> Tortas Especiales</label>
+                            <label><input type="checkbox" name="categoria" id="productos-veganos" /> Productos
+                                Veganos</label>
+                            <label><input type="checkbox" name="categoria" id="tortas-especiales" /> Tortas
+                                Especiales</label>
                         </fieldset>
+                        <!-- Filtro por Tipo -->
                         <fieldset>
                             <legend>Tipo</legend>
-                            <label for="tipo-pastel">Tipo</label>
+                            <label for="tipo-pastel">Selecciona un tipo</label>
                             <select name="tipo-pastel" id="tipo-pastel">
-                                <option>Seleccione una opción</option>
+                                <option value="">--Seleccione una opción --</option>
                                 <option value="pasteleria-tradicional">Pastelería Tradicional</option>
                                 <option value="postres-individuales">Postres Individuales</option>
                                 <option value="productos-sin-azucar">Productos Sin Azúcar</option>
@@ -220,30 +228,225 @@
                                 <option value="tortas-especiales">Tortas Especiales</option>
                             </select>
                         </fieldset>
+                        <!-- LISTADO DE PRODUCTOS EN TARJETAS -->
+                        <ul class="cards" id="lista-productos">
+                            <!-- Tortas Cuadradas -->
+                            <li data-categoria="tortas-cuadradas">
+                                <article>
+                                    <h4>Torta Cuadrada de Chocolate</h4>
+                                    <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas.
+                                        Personalizable con mensajes especiales.</p>
+                                    <p class="precio">$45.000 CLP</p>
+                                    <a href="#detalles" data-id="TC001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="tortas-cuadradas">
+                                <article>
+                                    <h4>Torta Cuadrada de Frutas</h4>
+                                    <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de
+                                        vainilla, ideal para celebraciones.</p>
+                                    <p class="precio">$50.000 CLP</p>
+                                    <a href="#detalles" data-id="TC002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Tortas Circulares -->
+                            <li data-categoria="tortas-circulares">
+                                <article>
+                                    <h4>Torta Circular de Vainilla</h4>
+                                    <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un
+                                        glaseado dulce, perfecto para cualquier ocasión.</p>
+                                    <p class="precio">$40.000 CLP</p>
+                                    <a href="#detalles" data-id="TT001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="tortas-circulares">
+                                <article>
+                                    <h4>Torta Circular de Manjar</h4>
+                                    <p>Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los
+                                        sabores dulces y clásicos.</p>
+                                    <p class="precio">$42.000 CLP</p>
+                                    <a href="#detalles" data-id="TT002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Postres Individuales -->
+                            <li data-categoria="postres-individuales">
+                                <article>
+                                    <h4>Mousse de Chocolate</h4>
+                                    <p>Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal
+                                        para los amantes del chocolate.</p>
+                                    <p class="precio">$5.000 CLP</p>
+                                    <a href="#detalles" data-id="PI001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="postres-individuales">
+                                <article>
+                                    <h4>Tiramisú Clásico</h4>
+                                    <p>Postre italiano con capas de café, mascarpone y cacao, perfecto para finalizar
+                                        cualquier comida.</p>
+                                    <p class="precio">$5.500 CLP</p>
+                                    <a href="#detalles" data-id="PI002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Productos Sin Azúcar -->
+                            <li data-categoria="productos-sin-azucar">
+                                <article>
+                                    <h4>Torta Sin Azúcar de Naranja</h4>
+                                    <p>Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan
+                                        opciones más saludables.</p>
+                                    <p class="precio">$48.000 CLP</p>
+                                    <a href="#detalles" data-id="PSA001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="productos-sin-azucar">
+                                <article>
+                                    <h4>Cheesecake Sin Azúcar</h4>
+                                    <p>Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.
+                                    </p>
+                                    <p class="precio">$47.000 CLP</p>
+                                    <a href="#detalles" data-id="PSA002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Pastelería Tradicional -->
+                            <li data-categoria="pasteleria-tradicional">
+                                <article>
+                                    <h4>Empanada de Manzana</h4>
+                                    <p>Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce
+                                        desayuno o merienda.</p>
+                                    <p class="precio">$3.000 CLP</p>
+                                    <a href="#detalles" data-id="PT001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="pasteleria-tradicional">
+                                <article>
+                                    <h4>Tarta de Santiago</h4>
+                                    <p>Tradicional tarta española hecha con almendras, azúcar y huevos, clásica y
+                                        deliciosa.</p>
+                                    <p class="precio">$6.000 CLP</p>
+                                    <a href="#detalles" data-id="PT002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Productos Sin Gluten -->
+                            <li data-categoria="productos-sin-gluten">
+                                <article>
+                                    <h4>Brownie Sin Gluten</h4>
+                                    <p>Rico y denso, perfecto para quienes evitan el gluten sin sacrificar el sabor.</p>
+                                    <p class="precio">$4.000 CLP</p>
+                                    <a href="#detalles" data-id="PG001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="productos-sin-gluten">
+                                <article>
+                                    <h4>Pan Sin Gluten</h4>
+                                    <p>Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.</p>
+                                    <p class="precio">$3.500 CLP</p>
+                                    <a href="#detalles" data-id="PG002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Productos Veganos -->
+                            <li data-categoria="productos-veganos">
+                                <article>
+                                    <h4>Torta Vegana de Chocolate</h4>
+                                    <p>Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal.</p>
+                                    <p class="precio">$50.000 CLP</p>
+                                    <a href="#detalles" data-id="PV001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="productos-veganos">
+                                <article>
+                                    <h4>Galletas Veganas de Avena</h4>
+                                    <p>Crujientes y sabrosas, una excelente opción para un snack saludable y vegano.</p>
+                                    <p class="precio">$4.500 CLP</p>
+                                    <a href="#detalles" data-id="PV002">Ver detalles</a>
+                                </article>
+                            </li>
+
+                            <!-- Tortas Especiales -->
+                            <li data-categoria="tortas-especiales">
+                                <article>
+                                    <h4>Torta Especial de Cumpleaños</h4>
+                                    <p>Diseñada especialmente para celebraciones, personalizable con decoraciones y
+                                        mensajes únicos.</p>
+                                    <p class="precio">$55.000 CLP</p>
+                                    <a href="#detalles" data-id="TE001">Ver detalles</a>
+                                </article>
+                            </li>
+                            <li data-categoria="tortas-especiales">
+                                <article>
+                                    <h4>Torta Especial de Boda</h4>
+                                    <p>Elegante y deliciosa, diseñada para ser el centro de atención en cualquier boda.
+                                    </p>
+                                    <p class="precio">$60.000 CLP</p>
+                                    <a href="#detalles" data-id="TE002">Ver detalles</a>
+                                </article>
+                            </li>
+                        </ul>
+
+
                     </form>
                 </aside>
-                <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y
+                <p>Explora nuestra variedad de productos. Cada uno hecho con ingredientes frescos y naturales. Con mucho
                     amor.
                 </p>
             </section>
 
-            <!-- CARRITO -->
+            <!-- 🛒 Sección del carrito -->
             <section id="carrito">
                 <h2>Carrito</h2>
                 <p>Revisa los productos que has seleccionado para tu compra. ¡No olvides completar tu pedido!</p>
+
+                <ul id="lista-carrito">
+                    <!-- Los productos se insertan dinámicamente aquí -->
+                </ul>
+
+                <p class="total">Total: $0 CLP</p>
+                <button class="btn" id="finalizar">Finalizar compra</button>
             </section>
 
-            <!-- PERFIL -->
+
+            <!-- 👤 Sección de perfil del usuario -->
             <section id="perfil">
                 <h2>Perfil</h2>
                 <p>Gestiona tu información personal, direcciones de envío y preferencias de pago.</p>
             </section>
 
-            <!-- BLOG -->
+            <!-- Formulario de edición de perfil -->
+            <form id="form-perfil">
+                <!-- Campo: Nombre del usuario -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+
+                <!-- Campo: Correo electrónico -->
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo">
+
+                <!-- Campo: Dirección de envío -->
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion">
+
+                <!-- Botón para guardar cambios -->
+                <button type="submit" class="btn">Guardar cambios</button>
+            </form>
+
+
+            <!-- 📚 Sección del blog de repostería -->
             <section id="blog">
-                <h2>Sus Mejores Recetas</h2>
+                <h2>Sus Mejores Recetas</h2> <!-- Título principal del blog -->
                 <p>Descubre recetas exclusivas y consejos de repostería en nuestro blog.</p>
             </section>
+
+            <!-- 🧁 Artículo destacado del blog -->
+            <article>
+                <h3>Receta de Torta Tres Leches</h3> <!-- Título del artículo -->
+                <p>Aprende a preparar una deliciosa torta tres leches con nuestra receta paso a paso.</p>
+                <a href="#">Leer más</a> <!-- Enlace para ver el artículo completo -->
+            </article>
+
 
             <!-- FIDELIZACION -->
             <section id="fidelizacion">

@@ -1,16 +1,13 @@
-/* Hoja de estilo base y componentes para la página de pastelería "Mil Sabores" */
-
-/* Paleta y tokens de diseño */
+/*1.Paleta y tokens de diseño */
 :root {
-  --fondo: #fff5e1; /* Crema Pastel */
-  --acento-rosa: #ffc0cb; /* Rosa Suave */
-  --acento-chocolate: #8b4513; /* Chocolate */
-  --texto-principal: #5d4037; /* Marrón Oscuro */
-  --texto-secundario: #b0bec5; /* Gris Claro */
-  --borde-suave: #f3e1c6; /* Borde y separación suave */
+  --fondo: #fff5e1; /* Fondo */
+  --acento-rosa: #ffc0cb; /* Botones y elementos interactivos */
+  --acento-chocolate: #8b4513; /* Contraste y tradición */
+  --texto-principal: #5d4037; /* Texto principal */
+  --texto-secundario: #b0bec5; /* Texto secundario y descripciones */
+  --borde-suave: #f3e1c6; /* Borde*/
 }
-
-/* Reset y tipografía base */
+/*2.Reset y tipografía base */
 html {
   box-sizing: border-box;
 }
@@ -24,11 +21,10 @@ body {
   margin: 0;
   background-color: var(--fondo);
   color: var(--texto-principal);
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif; /*Fuente*/
   line-height: 1.5;
 }
-
-/* Enlaces y enfoque accesible */
+/*3. Enlaces y accesibilidad */
 a {
   color: var(--acento-chocolate);
   text-decoration: none;
@@ -52,55 +48,36 @@ a:hover {
   border-radius: 6px;
 }
 
-/* Jerarquía de texto */
+/*4. Encabezados y jerarquía visual del texto */
 h1,
 h2,
 h3,
 h4 {
-  font-family: "Pacifico", cursive;
+  font-family: "Pacifico", cursive; /* Fuente artística para títulos */
   color: var(--texto-principal);
   margin: 0 0 0.5rem;
 }
+
 .texto-principal {
   font-size: 1.05rem;
-  color: var(--texto-principal);
 }
 .texto-secundario {
   font-size: 0.95rem;
   color: var(--texto-secundario);
 }
 
-/* Layout principal */
+/*5. Layout principal*/
 main {
   max-width: 1120px;
   margin: 0 auto;
   padding: 1rem;
 }
 
-/* Botón base */
-.btn {
-  background-color: var(--acento-rosa);
-  color: #fff5e1;
-  border: none;
-  padding: 10px 18px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background 0.3s, transform 0.05s ease;
-}
-.btn:hover {
-  background-color: var(--acento-chocolate);
-}
-.btn:active {
-  transform: scale(0.98);
-}
-
-/* Estilo para el contenedor del logo */
+/*6. Logo y encabezado branding */
 .logo-container {
   text-align: center;
   margin: 40px 0;
 }
-/* Estilo para el logo */
 .logo {
   width: 200px;
   height: auto;
@@ -115,13 +92,13 @@ header {
   border-bottom: 2px solid var(--acento-rosa);
   background: #ffffff;
 }
-
 .brand .tagline {
   margin: 0.25rem 0 0;
-  color: var(--texto-secundario);
   font-size: 0.95rem;
+  color: var(--texto-secundario);
 }
 
+/*7. Navegación principal */
 nav ul {
   list-style: none;
   padding: 0;
@@ -140,15 +117,12 @@ nav a[data-nav]:hover {
   background: rgba(255, 192, 203, 0.3);
 }
 
-/* Título de la sección "Destacados" en la página principal */
+/*8. Sección destacados (catálogo) */
 #home-destacados-title {
-  font-family: "Pacifico", cursive;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--texto-principal);
 }
 
-/* Lista de tarjetas destacadas */
 .cards {
   list-style: none;
   margin: 0;
@@ -158,7 +132,6 @@ nav a[data-nav]:hover {
   gap: 1rem;
 }
 
-/* Cada tarjeta */
 .cards li article {
   background: #ffffff;
   border: 1px solid var(--borde-suave);
@@ -171,15 +144,10 @@ nav a[data-nav]:hover {
   height: 100%;
 }
 
-/* Títulos de productos */
 .cards li article h4 {
-  font-family: "Pacifico", cursive;
-  font-size: 1.2rem;
-  margin: 0 0 0.5rem;
-  color: var(--texto-principal);
+  font-size: 1.2rem; /* Comentado solo aquí: se repite en varias secciones */
 }
 
-/* Descripción */
 .cards li article p {
   flex-grow: 1;
   font-size: 0.95rem;
@@ -187,7 +155,6 @@ nav a[data-nav]:hover {
   margin-bottom: 0.75rem;
 }
 
-/* Enlace de acción */
 .cards li article a {
   align-self: flex-start;
   background-color: var(--acento-rosa);
@@ -202,69 +169,236 @@ nav a[data-nav]:hover {
   background-color: var(--acento-chocolate);
 }
 
-/* Sección: Buscador en página principal */
-
-/* Contenedor general del buscador */
+/*9. Buscador */
 section[aria-labelledby="buscador-title"] {
-  padding: 2rem 1rem; /* Espaciado interno amplio para resaltar la sección */
-  background: #ffffff; /* Fondo blanco para contraste visual */
-  border-bottom: 2px solid var(--acento-rosa); /* Línea inferior decorativa */
-  margin-bottom: 1.5rem; /* Separación respecto a la siguiente sección */
+  padding: 2rem 1rem;
+  background: #ffffff;
+  border-bottom: 2px solid var(--acento-rosa);
+  margin-bottom: 1.5rem;
 }
-
-/* Título del buscador */
 section[aria-labelledby="buscador-title"] h2 {
-  font-family: "Pacifico", cursive; /* Fuente decorativa artesanal */
-  font-size: 1.6rem; /* Tamaño destacado para jerarquía visual */
-  margin-bottom: 0.5rem; /* Separación respecto al párrafo */
-  color: var(--texto-principal); /* Color principal para consistencia */
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
 }
-
-/* Descripción o subtítulo del buscador */
 section[aria-labelledby="buscador-title"] p {
-  margin-bottom: 1rem; /* Espacio inferior antes del formulario */
-  color: var(--texto-secundario); /* Color secundario para tono suave */
+  margin-bottom: 1rem;
+  color: var(--texto-secundario);
 }
 
-/* 🧾 Formulario de búsqueda en pantalla principal */
 form[data-screen="home"] {
-  display: flex; /* Flexbox para alinear elementos horizontalmente */
-  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
-  gap: 0.5rem; /* Espacio entre campos */
-  align-items: center; /* Alineación vertical centrada */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
 }
-
-/* Etiqueta del campo de búsqueda */
 form[data-screen="home"] label {
-  font-weight: bold; /* Texto en negrita para destacar */
-  color: var(--texto-principal); /* Color principal para consistencia visual */
+  font-weight: bold;
 }
-
-/* Campo de entrada tipo búsqueda */
 form[data-screen="home"] input[type="search"] {
-  flex: 1; /* Ocupa todo el espacio disponible */
-  min-width: 220px; /* Asegura legibilidad mínima en pantallas pequeñas */
-  padding: 0.6rem 0.8rem; /* Espaciado interno cómodo */
-  border: 1px solid var(--borde-suave); /* Borde suave definido por variable */
-  border-radius: 6px; /* Bordes redondeados para estilo amigable */
-  font-size: 1rem; /* Tamaño de texto estándar */
+  flex: 1;
+  min-width: 220px;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--borde-suave);
+  border-radius: 6px;
+  font-size: 1rem;
 }
-
-/* Botón de búsqueda */
 form[data-screen="home"] button {
-  background-color: var(--acento-rosa); /* Fondo rosa suave */
-  color: #fff5e1; /* Texto claro sobre fondo rosa */
-  border: none; /* Sin borde externo */
-  padding: 0.6rem 1rem; /* Espaciado interno horizontal y vertical */
-  border-radius: 6px; /* Bordes redondeados */
-  font-weight: bold; /* Texto en negrita para destacar acción */
-  cursor: pointer; /* Cursor tipo botón */
-  transition: background 0.3s; /* Transición suave al cambiar color */
+  background-color: var(--acento-rosa);
+  color: #fff5e1;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+form[data-screen="home"] button:hover {
+  background-color: var(--acento-chocolate);
 }
 
-/* Efecto hover para el botón */
-form[data-screen="home"] button:hover {
-  background-color: var(
-    --acento-chocolate
-  ); /* Cambio de fondo al pasar el mouse */
+/*10. Aside de filtros */
+aside[aria-label="Filtros"] {
+  background: #ffffff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  max-width: 280px;
+}
+
+aside[aria-label="Filtros"] fieldset {
+  border: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+aside[aria-label="Filtros"] legend {
+  font-size: 1.2rem;
+}
+aside[aria-label="Filtros"] label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+aside[aria-label="Filtros"] input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+aside[aria-label="Filtros"] select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--borde-suave);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--texto-principal);
+  background: #fff;
+}
+
+/*11. Pie de página -Botón reutilizable (carrito, acciones)*/
+.btn {
+  background-color: var(--acento-rosa);
+  color: #fff5e1
+
+/* 🧁 Tarjetas del catálogo de productos */
+
+/* Precio del producto */
+.precio {
+  font-weight: bold;                     /* Resalta el precio */
+  color: var(--acento-chocolate);        /* Usa el color chocolate como acento */
+  margin: 0.5rem 0;                      /* Espaciado vertical para separar del resto del contenido */
+}
+
+/* Contenedor del artículo (tarjeta) */
+li article {
+  display: flex;                         /* Usa flexbox para organizar el contenido verticalmente */
+  flex-direction: column;               /* Apila los elementos de arriba hacia abajo */
+}
+
+/* Enlace de acción dentro de la tarjeta */
+li article a {
+  margin-top: auto;                     /* Empuja el botón hacia el fondo de la tarjeta */
+}
+/*Estilo del carrito */
+#carrito {
+  background: #ffffff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Lista de productos en el carrito */
+#lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+#lista-carrito li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--borde-suave);
+}
+
+/* Botón eliminar */
+#lista-carrito button {
+  background-color: var(--acento-rosa);
+  color: #fff5e1;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+#lista-carrito button:hover {
+  background-color: var(--acento-chocolate);
+}
+
+/* Total */
+.total {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--texto-principal);
+  margin-top: 1rem;
+}
+/* 👤 Estilo para la sección de perfil */
+#perfil {
+  background: #ffffff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* 🧾 Formulario de perfil */
+#form-perfil {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+/* Etiquetas del formulario */
+#form-perfil label {
+  font-weight: bold;
+  color: var(--texto-principal);
+}
+
+/* Campos de entrada */
+#form-perfil input {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--borde-suave);
+  border-radius: 6px;
+  font-size: 1rem;
+  color: var(--texto-principal);
+}
+
+/* Botón de guardar (usa clase .btn ya definida) */
+
+/*Estilo para la sección del blog */
+#blog {
+  background: #ffffff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/*Artículos del blog */
+#blog + article {
+  background: #fff5e1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 4px rgba(93, 64, 55, 0.1);
+}
+
+/* Título del artículo */
+#blog + article h3 {
+  font-size: 1.3rem;
+  color: var(--texto-principal);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del artículo */
+#blog + article p {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  margin-bottom: 0.75rem;
+}
+
+/* Enlace de acción */
+#blog + article a {
+  background-color: var(--acento-rosa);
+  color: #fff5e1;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s;
+}
+#blog + article a:hover {
+  background-color: var(--acento-chocolate);
 }
