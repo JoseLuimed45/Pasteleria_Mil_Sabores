@@ -464,3 +464,41 @@ li article a {
     grid-template-columns: 1fr;
   }
 }
+
+/*Imagen dentro de .cards */
+.cards img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
+}
+
+/*Hover en tarjeta (opcional visual) */
+.cards li article:hover {
+  box-shadow: 0 4px 10px rgba(93, 64, 55, 0.15);
+  transform: translateY(-2px);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/*Botón reutilizable hover */
+.btn:hover {
+  background-color: var(--acento-chocolate);
+  color: #fff;
+}
+
+/*Enlaces accesibles */
+a:focus {
+  outline: 2px dashed var(--acento-rosa);
+  outline-offset: 4px;
+}
+
+/*Utilidad para ocultar visualmente pero mantener accesible */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}

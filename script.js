@@ -1,5 +1,5 @@
 // ==============================
-// 🧁 DESTACADOS EN HOME
+//  DESTACADOS EN HOME
 // ==============================
 const destacados = [
   {
@@ -51,9 +51,9 @@ if (ulDestacados) {
   `).join('');
 }
 
-// ==============================
-// 🎯 FILTROS DE CATÁLOGO
-// ==============================
+ 
+//  FILTROS DE CATÁLOGO
+ 
 const formFiltros = document.querySelector('[data-screen="catalogo-filtro"]');
 const filasTabla = document.querySelectorAll('#tabla-productos tbody tr');
 const productosLista = document.querySelectorAll('#lista-productos li');
@@ -82,9 +82,9 @@ if (formFiltros) {
   });
 }
 
-// ==============================
-// 🛒 CARRITO DE COMPRAS
-// ==============================
+ 
+/*CARRITO DE COMPRAS*/
+
 const listaCarrito = document.getElementById("lista-carrito");
 const totalTexto = document.querySelector(".total");
 let total = 0;
@@ -113,12 +113,10 @@ function actualizarTotal() {
   totalTexto.textContent = `Total: $${total.toLocaleString()} CLP`;
 }
 
-// Simulación de carga inicial
+/*Simulación de carga inicial*/
 productosCarrito.forEach(p => agregarProducto(p));
 
-// ==============================
-// 👤 FORMULARIO DE PERFIL
-// ==============================
+/*FORMULARIO DE PERFIL*/
 const formPerfil = document.getElementById("form-perfil");
 
 if (formPerfil) {
@@ -137,5 +135,27 @@ if (formPerfil) {
     const perfil = { nombre, correo, direccion };
     console.log("Perfil guardado:", perfil);
     alert("¡Cambios guardados correctamente!");
+  });
+}
+
+/*FORMULARIO DE INGRESO */
+const formIngresar = document.getElementById("form-ingresar");
+
+if (formIngresar) {
+  formIngresar.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const correo = document.getElementById("correo").value.trim();
+    const clave = document.getElementById("clave").value.trim();
+
+    if (!correo || !clave) {
+      alert("Por favor completa ambos campos.");
+      return;
+    }
+
+    /*Simulación de autenticación (puedes conectar con backend o localStorage)*/
+    const usuario = { correo, clave };
+    console.log("Usuario autenticado:", usuario);
+    alert("¡Bienvenido! Has ingresado correctamente.");
   });
 }

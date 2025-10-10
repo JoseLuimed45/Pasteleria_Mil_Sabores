@@ -11,7 +11,7 @@
         rel="stylesheet">
     <!-- Enlace a un archivo CSS externo -->
     <link rel="stylesheet" href="css/estilo.css">
-    <!-- Nota: Solo HTML. CSS/JS se agregará en etapas siguientes -->
+    <!-- Enlace a un archivo bootstrap externo -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
@@ -436,16 +436,26 @@
         </section>
 
         <!-- INGRESAR -->
-        <section id="ingresar">
-            <h2>Ingresar</h2>
-            <p>Accede a tu cuenta para disfrutar de una experiencia personalizada.</p>
+        <section id="ingresar" aria-labelledby="ingresar-title">
+            <h2 id="ingresar-title">Ingresar</h2>
+            <p>Accede a tu cuenta para disfrutar de nuestros producots.</p>
+            <form id="form-ingresar">
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="clave">Contraseña</label>
+                <input type="password" id="clave" name="clave" required>
+
+                <button type="submit" class="btn">Ingresar</button>
+            </form>
         </section>
+
 
         <!-- DETALLES DE PRODUCTO -->
         <section id="detalles" class="screen" aria-labelledby="detalles-title">
             <h2 id="detalles-title">Detalles del producto</h2>
-            <p class="texto-secundario">Selecciona un producto en “Destacados de la semana” o en el catálogo para
-                ver más información aquí.
+            <p class="texto-secundario">Selecciona un producto en “Destacados de la semana” o en el catálogo para ver
+                más información aquí.
             </p>
         </section>
 
