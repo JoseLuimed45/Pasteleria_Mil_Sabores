@@ -1,0 +1,270 @@
+/* Hoja de estilo base y componentes para la página de pastelería "Mil Sabores" */
+
+/* Paleta y tokens de diseño */
+:root {
+  --fondo: #fff5e1; /* Crema Pastel */
+  --acento-rosa: #ffc0cb; /* Rosa Suave */
+  --acento-chocolate: #8b4513; /* Chocolate */
+  --texto-principal: #5d4037; /* Marrón Oscuro */
+  --texto-secundario: #b0bec5; /* Gris Claro */
+  --borde-suave: #f3e1c6; /* Borde y separación suave */
+}
+
+/* Reset y tipografía base */
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fondo);
+  color: var(--texto-principal);
+  font-family: "Lato", sans-serif;
+  line-height: 1.5;
+}
+
+/* Enlaces y enfoque accesible */
+a {
+  color: var(--acento-chocolate);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: -999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #ffffff;
+  color: var(--texto-principal);
+  border: 2px solid var(--acento-rosa);
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+}
+
+/* Jerarquía de texto */
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Pacifico", cursive;
+  color: var(--texto-principal);
+  margin: 0 0 0.5rem;
+}
+.texto-principal {
+  font-size: 1.05rem;
+  color: var(--texto-principal);
+}
+.texto-secundario {
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+}
+
+/* Layout principal */
+main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Botón base */
+.btn {
+  background-color: var(--acento-rosa);
+  color: #fff5e1;
+  border: none;
+  padding: 10px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s, transform 0.05s ease;
+}
+.btn:hover {
+  background-color: var(--acento-chocolate);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Estilo para el contenedor del logo */
+.logo-container {
+  text-align: center;
+  margin: 40px 0;
+}
+/* Estilo para el logo */
+.logo {
+  width: 200px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header {
+  padding: 1rem;
+  border-bottom: 2px solid var(--acento-rosa);
+  background: #ffffff;
+}
+
+.brand .tagline {
+  margin: 0.25rem 0 0;
+  color: var(--texto-secundario);
+  font-size: 0.95rem;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+nav a[data-nav] {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  background: rgba(255, 192, 203, 0.15);
+}
+nav a[data-nav]:hover {
+  background: rgba(255, 192, 203, 0.3);
+}
+
+/* Título de la sección "Destacados" en la página principal */
+#home-destacados-title {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--texto-principal);
+}
+
+/* Lista de tarjetas destacadas */
+.cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+/* Cada tarjeta */
+.cards li article {
+  background: #ffffff;
+  border: 1px solid var(--borde-suave);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(93, 64, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* Títulos de productos */
+.cards li article h4 {
+  font-family: "Pacifico", cursive;
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: var(--texto-principal);
+}
+
+/* Descripción */
+.cards li article p {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  color: var(--texto-secundario);
+  margin-bottom: 0.75rem;
+}
+
+/* Enlace de acción */
+.cards li article a {
+  align-self: flex-start;
+  background-color: var(--acento-rosa);
+  color: #fff5e1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.cards li article a:hover {
+  background-color: var(--acento-chocolate);
+}
+
+/* Sección: Buscador en página principal */
+
+/* Contenedor general del buscador */
+section[aria-labelledby="buscador-title"] {
+  padding: 2rem 1rem; /* Espaciado interno amplio para resaltar la sección */
+  background: #ffffff; /* Fondo blanco para contraste visual */
+  border-bottom: 2px solid var(--acento-rosa); /* Línea inferior decorativa */
+  margin-bottom: 1.5rem; /* Separación respecto a la siguiente sección */
+}
+
+/* Título del buscador */
+section[aria-labelledby="buscador-title"] h2 {
+  font-family: "Pacifico", cursive; /* Fuente decorativa artesanal */
+  font-size: 1.6rem; /* Tamaño destacado para jerarquía visual */
+  margin-bottom: 0.5rem; /* Separación respecto al párrafo */
+  color: var(--texto-principal); /* Color principal para consistencia */
+}
+
+/* Descripción o subtítulo del buscador */
+section[aria-labelledby="buscador-title"] p {
+  margin-bottom: 1rem; /* Espacio inferior antes del formulario */
+  color: var(--texto-secundario); /* Color secundario para tono suave */
+}
+
+/* 🧾 Formulario de búsqueda en pantalla principal */
+form[data-screen="home"] {
+  display: flex; /* Flexbox para alinear elementos horizontalmente */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas si es necesario */
+  gap: 0.5rem; /* Espacio entre campos */
+  align-items: center; /* Alineación vertical centrada */
+}
+
+/* Etiqueta del campo de búsqueda */
+form[data-screen="home"] label {
+  font-weight: bold; /* Texto en negrita para destacar */
+  color: var(--texto-principal); /* Color principal para consistencia visual */
+}
+
+/* Campo de entrada tipo búsqueda */
+form[data-screen="home"] input[type="search"] {
+  flex: 1; /* Ocupa todo el espacio disponible */
+  min-width: 220px; /* Asegura legibilidad mínima en pantallas pequeñas */
+  padding: 0.6rem 0.8rem; /* Espaciado interno cómodo */
+  border: 1px solid var(--borde-suave); /* Borde suave definido por variable */
+  border-radius: 6px; /* Bordes redondeados para estilo amigable */
+  font-size: 1rem; /* Tamaño de texto estándar */
+}
+
+/* Botón de búsqueda */
+form[data-screen="home"] button {
+  background-color: var(--acento-rosa); /* Fondo rosa suave */
+  color: #fff5e1; /* Texto claro sobre fondo rosa */
+  border: none; /* Sin borde externo */
+  padding: 0.6rem 1rem; /* Espaciado interno horizontal y vertical */
+  border-radius: 6px; /* Bordes redondeados */
+  font-weight: bold; /* Texto en negrita para destacar acción */
+  cursor: pointer; /* Cursor tipo botón */
+  transition: background 0.3s; /* Transición suave al cambiar color */
+}
+
+/* Efecto hover para el botón */
+form[data-screen="home"] button:hover {
+  background-color: var(
+    --acento-chocolate
+  ); /* Cambio de fondo al pasar el mouse */
+}

@@ -6,173 +6,267 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pastelería Mil Sabores : Trabajo HTML</title>
     <meta name="description" content="Trabajo Página web de una pastelería">
+    <!--Tipografía Fuente desde Google-->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+    /*-- Favicon (ajusta rutas si ya tienes assets) Se muestra en pestañas, marcadores y accesos directos
+    link rel="icon" href="/assets/favicon.ico"
+    link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"> -- Se usa en accesos directos en iOS --*/
+    <!-- Enlace a un archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Nota: Solo HTML. CSS/JS se agregará en etapas siguientes -->
-</head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
-<body>
-    <!-- Enlace de accesibilidad -->
-    <a href="#contenido" class="skip-link">Saltar al contenido</a>
+    <style>
+        body {
+            /*Color de fondo */
+            background-color: #FFF5E1;
+            /*Fuente principal */
+            font-family: 'Lato', sans-serif;
+            /* Color de texto */
+            color: #5D4037;
+            /* Elimina el margen por defecto */
+            margin: 0%;
+            /* Elimina el padding por defecto */
+            padding: 0%;
 
-    <!-- HEADER / NAV -->
-    <header role="banner">
-        <div class="brand">
-            <h1 aria-label="Pastelería Mil Sabores">Pastelería Mil Sabores</h1>
-            <p class="tagline">Donde el dulzor de nuestros sabores será inolvidable</p>
-        </div>
+            /* Fuente del encabezado con "Pacifico" */
+            h1,
+            h2,
+            h3,
+            h4 {
+                font-family: 'Pacifico', cursive;
+                color: #5D4037;
 
-        <nav aria-label="Menu Principal">
-            <ul>
-                <li><a href="#home" data-nav>Inicio</a></li>
-                <li><a href="#catalogo" data-nav>Catálogo</a></li>
-                <li><a href="#carrito" data-nav>Carrito</a></li>
-                <li><a href="#perfil" data-nav>Perfil</a></li>
-                <li><a href="#blog" data-nav>Sus Mejores Recetas</a></li>
-                <li><a href="#fidelizacion" data-nav>Créditos REM</a></li>
-                <li><a href="#ingresar" data-nav>Ingresar</a></li>
-            </ul>
-        </nav>
-    </header>
+                /*Texto principal → Marrón Oscuro*/
+                .text-primary {
+                    font-size: 1.2rem;
+                    color: #5D4037;
+                }
 
-    <!-- MAIN -->
-    <main id="contenido" tabindex="-1">
+                /*Texto secundario → Gris Claro*/
+                .text-secondary {
+                    font-size: 1rem;
+                    color: #B0BEC5;
+                }
 
-        <!-- HOME -->
-        <section id="home" class="screen" aria-labelledby="home-title">
-            <h2 id="home-title">Bienvenidos a Pastelería Mil Sabores</h2>
-            <p>En Pastelería Mil Sabores, nos dedicamos a endulzar tus momentos especiales con nuestras deliciosas
-                creaciones. Desde pasteles personalizados hasta postres clásicos, cada bocado es una experiencia única
-                llena de sabor y amor por la repostería.</p>
-            <p>Nuestro equipo de expertos pasteleros utiliza ingredientes frescos y de alta calidad para garantizar que
-                cada producto no solo sea visualmente atractivo, sino también exquisito al paladar. Ya sea que estés
-                celebrando un cumpleaños, una boda o simplemente quieras darte un capricho, tenemos la opción perfecta
-                para ti.</p>
-            <p>Explora nuestro catálogo en línea para descubrir una variedad de opciones que se adaptan a tus gustos y
-                necesidades. Además, ofrecemos servicios de entrega para que puedas disfrutar de nuestros productos
-                desde la comodidad de tu hogar.</p>
-            <p>Únete a nuestra comunidad y suscríbete a nuestro blog para recibir las mejores recetas y consejos de
-                repostería directamente en tu bandeja de entrada. En Pastelería Mil Sabores, estamos comprometidos a
-                hacer que cada ocasión sea inolvidable con el dulzor de nuestros sabores.</p>
-            <p>¡Gracias por elegirnos para endulzar tu vida!</p>
-        </section>
+                /*Botones con colores personalizados */
+                .btn {
+                    background-color: #FFC0CB;
+                    color: #8B4513;
+                    border: none;
+                    padding: 10px 20px;
+                    margin-top: 10px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border-radius: 5px;
+                    transition: background-color 0.3s ease;
+                }
 
-        <!-- DESTACADOS -->
-        <section aria-labelledby="home-destacados-title">
-            <h3 id="home-destacados-title">Destacados de hoy</h3>
-            <ul class="cards" data-testid="home-destacados">
-                <li>
-                    <article>
-                        <h4>Torta Cuadrada de Chocolate</h4>
-                        <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con
-                            mensajes especiales.</p>
-                        <a href="#detalles" data-action="Ver detalles" data-id="TC001">Ver detalles</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h4>Torta Cuadrada de Frutas </h4>
-                        <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal
-                            para celebraciones.</p>
-                        <a href="#detalles" data-action="Ver detalles" data-id="TC002">Ver detalles</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h4>Torta Circular de Vainilla </h4>
-                        <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce,
-                            perfecto para cualquier ocasión.</p>
-                        <a href="#detalles" data-action="Ver detalles" data-id="TT001">Ver detalles</a>
-                    </article>
-                </li>
-                <li>
-                    <article>
-                        <h4>Torta Circular de Manjar </h4>
-                        <p>Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores
-                            dulces y clásicos.</p>
-                        <a href="#detalles" data-action="Ver detalles" data-id="TT002">Ver detalles</a>
-                    </article>
-                </li>
-            </ul>
-        </section>
+                /*Efecto hover para los botones */
+                .btn:hover {
+                    background-color: #8B4513;
+                    color: #FFF5E1;
+                }
+            }
+        }
+    </style>
 
-        <!-- BUSCADOR -->
-        <section aria-labelledby="buscador-title">
-            <h2 id="buscador-title">Inicio</h2>
-            <p>Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora
-                nuestro catálogo y descubre las delicias que tenemos para ti.</p>
-            <form aria-label="Buscador de productos" data-screen="home">
-                <label for="q">¿Qué estás buscando?</label>
-                <input id="q" name="q" type="search" placeholder="Buscar productos...">
-                <button type="submit">Buscar</button>
-            </form>
-        </section>
-        <!--Pantalla: 2 Catalogo -->
-        <!-- CATALOGO -->
-        <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
-            <h2 id="catalogo-title">Catálogo de pasteles</h2>
+    <head>
 
-            <aside aria-label="Filtros">
-                <form data-screen="catalogo-filtro">
-                    <fieldset>
-                        <legend>Categorías</legend>
-                        <label><input type="checkbox" name="cat" id="tortas-cuadradas"/> Tortas Cuadradas</label>
-                        <label><input type="checkbox" name="cat" id="tortas-circulares"/> Tortas Circulares</label>
-                        <label><input type="checkbox" name="cat" id="postres-individuales"/> Postres Individuales</label>
-                        <label><input type="checkbox" name="cat" id="productos-sin-azucar"/> Productos Sin Azúcar</label>
-                        <label><input type="checkbox" name="cat" id="pasteleria-tradicional"/> Pastelería Tradicional</label>
-                        <label><input type="checkbox" name="cat" id="productos-sin-gluten"/> Productos sin gluten</label>
-                        <label><input type="checkbox" name="cat" id="productos-veganos"/> Productos Veganos</label>
-                        <label><input type="checkbox" name="cat" id="tortas-especiales"/> Tortas Especiales</label>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Tipo</legend>
-                        <label for="tipo-pastel">Tipo</label>
-                        <select name="tipo-pastel" id="tipo-pastel">
-                            <option>Seleccione una opción</option>
-                            <option value="pasteleria-tradicional">Pastelería Tradicional</option>
-                            <option value="postres-individuales">Postres Individuales</option>
-                            <option value="productos-sin-azucar">Productos Sin Azúcar</option>
-                            <option value="tortas-circulares">Tortas Circulares</option>
-                            <option value="tortas-cuadradas">Tortas Cuadradas</option>
-                            <option value="tortas-especiales">Tortas Especiales</option>
-                        </select>
-                    </fieldset>
+    <body>
+        <!-- Enlace de accesibilidad -->
+        <a href="#contenido" class="skip-link">Saltar al contenido</a>
+
+        <!-- HEADER / NAV -->
+        <header role="banner">
+            <div class="brand">
+                <h1 aria-label="Pastelería Mil Sabores">Pastelería Mil Sabores</h1>
+                <p class="tagline">Donde el dulzor de nuestros sabores será inolvidable</p>
+            </div>
+
+            <nav aria-label="Menu Principal">
+                <ul>
+                    <li><a href="#home" data-nav>Inicio</a></li>
+                    <li><a href="#catalogo" data-nav>Catálogo</a></li>
+                    <li><a href="#carrito" data-nav>Carrito</a></li>
+                    <li><a href="#perfil" data-nav>Perfil</a></li>
+                    <li><a href="#blog" data-nav>Sus Mejores Recetas</a></li>
+                    <li><a href="#fidelizacion" data-nav>Créditos REM</a></li>
+                    <li><a href="#ingresar" data-nav>Ingresar</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- MAIN -->
+        <main id="contenido" tabindex="-1">
+
+            <!-- HOME -->
+            <section id="home" class="screen" aria-labelledby="home-title">
+                <h2 id="home-title">Bienvenidos a Pastelería Mil Sabores</h2>
+                <p>En Pastelería Mil Sabores, nos dedicamos a endulzar tus momentos especiales con nuestras deliciosas
+                    creaciones. Desde pasteles personalizados hasta postres clásicos, cada bocado es una experiencia
+                    única
+                    llena de sabor y amor por la repostería.</p>
+                <p>Nuestro equipo de expertos pasteleros utiliza ingredientes frescos y de alta calidad para garantizar
+                    que
+                    cada producto no solo sea visualmente atractivo, sino también exquisito al paladar. Ya sea que estés
+                    celebrando un cumpleaños, una boda o simplemente quieras darte un capricho, tenemos la opción
+                    perfecta
+                    para ti.</p>
+                <p>Explora nuestro catálogo en línea para descubrir una variedad de opciones que se adaptan a tus gustos
+                    y
+                    necesidades. Además, ofrecemos servicios de entrega para que puedas disfrutar de nuestros productos
+                    desde la comodidad de tu hogar.</p>
+                <p>Únete a nuestra comunidad y suscríbete a nuestro blog para recibir las mejores recetas y consejos de
+                    repostería directamente en tu bandeja de entrada. En Pastelería Mil Sabores, estamos comprometidos a
+                    hacer que cada ocasión sea inolvidable con el dulzor de nuestros sabores.</p>
+                <p>¡Gracias por elegirnos para endulzar tu vida!</p>
+            </section>
+
+            <!-- DESTACADOS -->
+            <section aria-labelledby="home-destacados-title">
+                <h3 id="home-destacados-title">Destacados de la semana</h3>
+                <ul class="cards" data-testid="home-destacados">
+                    <li>
+                        <article>
+                            <h4>Torta Cuadrada de Chocolate</h4>
+                            <p>Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable
+                                con
+                                mensajes especiales.</p>
+                            <a href="#detalles" data-action="Ver detalles" data-id="TC001"
+                                aria-label="Ver detalles de ">Ver detalles</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <h4>Torta Cuadrada de Frutas </h4>
+                            <p>Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal
+                                para celebraciones.</p>
+                            <a href="#detalles" data-action="Ver detalles" data-id="TC002"
+                                aria-label="Ver detalles ">Ver detalles</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <h4>Torta Circular de Vainilla </h4>
+                            <p>Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado
+                                dulce,
+                                perfecto para cualquier ocasión.</p>
+                            <a href="#detalles" data-action="Ver detalles" data-id="TT001"
+                                aria-label="Ver detalles Torta Circular de Vainilla">Ver detalles</a>
+                        </article>
+                    </li>
+                    <li>
+                        <article>
+                            <h4>Torta Circular de Manjar </h4>
+                            <p>Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores
+                                dulces y clásicos.</p>
+                            <a href="#detalles" data-action="Ver detalles" data-id="TT002"
+                                aria-label="Ver detalles Torta Circular de Manjar">Ver detalles</a>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+
+
+            <!-- BUSCADOR -->
+            <section aria-labelledby="buscador-title">
+                <h2 id="buscador-title">Inicio</h2>
+                <p>Bienvenido a Pastelería Mil Sabores, donde el dulzor de nuestros sabores será inolvidable. Explora
+                    nuestro catálogo y descubre las delicias que tenemos para ti.</p>
+                <form aria-label="Buscador de productos" data-screen="home" action="#catalago" method="get">
+                    <label for="q">¿Qué estás buscando?</label>
+                    <input id="q" name="q" type="search" placeholder="Buscar productos..."
+                        aria-describedby="buscador-ayuda">
+                    <button type="submit">Buscar</button>
                 </form>
-            </aside>
-            <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y amor.
-            </p>
-        </section>
+                <p id="buscador-ayuda" class="texto-secundario">Escribe el nombre de un producto o categoría.</p>
+            </section>
+            <!--Pantalla: 2 Catalogo -->
+            <!-- CATALOGO -->
+            <section id="catalogo" class="screen" aria-labelledby="catalogo-title">
+                <h2 id="catalogo-title">Catálogo de pasteles</h2>
 
-        <!-- CARRITO -->
-        <section id="carrito">
-            <h2>Carrito</h2>
-            <p>Revisa los productos que has seleccionado para tu compra. ¡No olvides completar tu pedido!</p>
-        </section>
+                <aside aria-label="Filtros">
+                    <form data-screen="catalogo-filtro">
+                        <fieldset>
+                            <legend>Categorías</legend>
+                            <label><input type="checkbox" name="cat" id="tortas-cuadradas" /> Tortas Cuadradas</label>
+                            <label><input type="checkbox" name="cat" id="tortas-circulares" /> Tortas Circulares</label>
+                            <label><input type="checkbox" name="cat" id="postres-individuales" /> Postres
+                                Individuales</label>
+                            <label><input type="checkbox" name="cat" id="productos-sin-azucar" /> Productos Sin
+                                Azúcar</label>
+                            <label><input type="checkbox" name="cat" id="pasteleria-tradicional" /> Pastelería
+                                Tradicional</label>
+                            <label><input type="checkbox" name="cat" id="productos-sin-gluten" /> Productos sin
+                                gluten</label>
+                            <label><input type="checkbox" name="cat" id="productos-veganos" /> Productos Veganos</label>
+                            <label><input type="checkbox" name="cat" id="tortas-especiales" /> Tortas Especiales</label>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Tipo</legend>
+                            <label for="tipo-pastel">Tipo</label>
+                            <select name="tipo-pastel" id="tipo-pastel">
+                                <option>Seleccione una opción</option>
+                                <option value="pasteleria-tradicional">Pastelería Tradicional</option>
+                                <option value="postres-individuales">Postres Individuales</option>
+                                <option value="productos-sin-azucar">Productos Sin Azúcar</option>
+                                <option value="tortas-circulares">Tortas Circulares</option>
+                                <option value="tortas-cuadradas">Tortas Cuadradas</option>
+                                <option value="tortas-especiales">Tortas Especiales</option>
+                            </select>
+                        </fieldset>
+                    </form>
+                </aside>
+                <p>Explora nuestra variedad de pasteles, cupcakes y postres. Cada uno hecho con ingredientes frescos y
+                    amor.
+                </p>
+            </section>
 
-        <!-- PERFIL -->
-        <section id="perfil">
-            <h2>Perfil</h2>
-            <p>Gestiona tu información personal, direcciones de envío y preferencias de pago.</p>
-        </section>
+            <!-- CARRITO -->
+            <section id="carrito">
+                <h2>Carrito</h2>
+                <p>Revisa los productos que has seleccionado para tu compra. ¡No olvides completar tu pedido!</p>
+            </section>
 
-        <!-- BLOG -->
-        <section id="blog">
-            <h2>Sus Mejores Recetas</h2>
-            <p>Descubre recetas exclusivas y consejos de repostería en nuestro blog.</p>
-        </section>
+            <!-- PERFIL -->
+            <section id="perfil">
+                <h2>Perfil</h2>
+                <p>Gestiona tu información personal, direcciones de envío y preferencias de pago.</p>
+            </section>
 
-        <!-- FIDELIZACION -->
-        <section id="fidelizacion">
-            <h2>Créditos REM</h2>
-            <p>Únete a nuestro programa de fidelización y acumula créditos con cada compra.</p>
-        </section>
+            <!-- BLOG -->
+            <section id="blog">
+                <h2>Sus Mejores Recetas</h2>
+                <p>Descubre recetas exclusivas y consejos de repostería en nuestro blog.</p>
+            </section>
 
-        <!-- INGRESAR -->
-        <section id="ingresar">
-            <h2>Ingresar</h2>
-            <p>Accede a tu cuenta para disfrutar de una experiencia personalizada.</p>
-        </section>
-    </main>
+            <!-- FIDELIZACION -->
+            <section id="fidelizacion">
+                <h2>Créditos REM</h2>
+                <p>Únete a nuestro programa de fidelización y acumula créditos con cada compra.</p>
+            </section>
 
-</body>
+            <!-- INGRESAR -->
+            <section id="ingresar">
+                <h2>Ingresar</h2>
+                <p>Accede a tu cuenta para disfrutar de una experiencia personalizada.</p>
+            </section>
+
+            <!-- DETALLES DE PRODUCTO -->
+            <section id="detalles" class="screen" aria-labelledby="detalles-title">
+                <h2 id="detalles-title">Detalles del producto</h2>
+                <p class="texto-secundario">Selecciona un producto en “Destacados de la semana” o en el catálogo para
+                    ver más información aquí.
+                </p>
+            </section>
+
+        </main>
+
+    </body>
 
 </html>
