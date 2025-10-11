@@ -1,6 +1,6 @@
-// ==============================
-//  DESTACADOS EN HOME
-// ==============================
+
+/*DESTACADOS EN HOME*/
+
 const destacados = [
   {
     id: "TC001",
@@ -51,9 +51,7 @@ if (ulDestacados) {
   `).join('');
 }
 
- 
-//  FILTROS DE CATÁLOGO
- 
+/*FILTROS DE CATÁLOGO*/
 const formFiltros = document.querySelector('[data-screen="catalogo-filtro"]');
 const filasTabla = document.querySelectorAll('#tabla-productos tbody tr');
 const productosLista = document.querySelectorAll('#lista-productos li');
@@ -82,7 +80,6 @@ if (formFiltros) {
   });
 }
 
- 
 /*CARRITO DE COMPRAS*/
 
 const listaCarrito = document.getElementById("lista-carrito");
