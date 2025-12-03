@@ -177,32 +177,37 @@ function Admin({auth}){
 
 function AdminProductos({auth}){
   const [items,setItems] = useState([])
-  const [form,setForm] = useState({name:'',price:'',description:''})
+  const [form,setForm] = useState({id:null,name:'',price:'',description:''})
   const [error,setError] = useState('')
   const headers = { 'Content-Type':'application/json', 'Authorization': `Bearer ${auth.token}` }
   const load = ()=> fetch(`${API}/api/products`).then(r=>r.json()).then(setItems)
   useEffect(()=>{ load() },[])
-  const create = async (e)=>{
+  const save = async (e)=>{
     e.preventDefault(); setError('')
-    const r = await fetch(`${API}/api/products`,{ method:'POST', headers, body: JSON.stringify({...form, price: Number(form.price)}) })
+    const payload = { name: form.name, price: Number(form.price), description: form.description }
+    const url = form.id? `${API}/api/products/${form.id}` : `${API}/api/products`
+    const method = form.id? 'PUT' : 'POST'
+    const r = await fetch(url,{ method, headers, body: JSON.stringify(payload) })
     const data = await r.json(); if(!r.ok){ setError(data.error||'Error'); return }
-    setForm({name:'',price:'',description:''}); load()
+    setForm({id:null,name:'',price:'',description:''}); load()
   }
   const removeItem = async (id)=>{
     const r = await fetch(`${API}/api/products/${id}`,{ method:'DELETE', headers })
     if(r.status===204) load()
   }
+  const editItem = (p)=> setForm({ id:p.id, name:p.name, price:String(p.price), description:p.description||'' })
   return (
     <div className="row g-3">
       <div className="col-md-5">
         <div className="card"><div className="card-body">
-          <h5 className="card-title">Crear producto</h5>
+          <h5 className="card-title">{form.id? 'Editar producto' : 'Crear producto'}</h5>
           {error && <div className="alert alert-danger">{error}</div>}
-          <form onSubmit={create} className="vstack gap-2">
+          <form onSubmit={save} className="vstack gap-2">
             <input className="form-control" placeholder="Nombre" value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/>
             <input className="form-control" placeholder="Precio" value={form.price} onChange={e=>setForm({...form,price:e.target.value})}/>
             <textarea className="form-control" placeholder="Descripción" value={form.description} onChange={e=>setForm({...form,description:e.target.value})}/>
             <button className="btn btn-brand" type="submit">Guardar</button>
+            {form.id && <button type="button" className="btn btn-outline-secondary" onClick={()=>setForm({id:null,name:'',price:'',description:''})}>Cancelar</button>}
           </form>
         </div></div>
       </div>
@@ -214,7 +219,10 @@ function AdminProductos({auth}){
               {items.map(p=> (
                 <tr key={p.id}>
                   <td>{p.id}</td><td>{p.name}</td><td>${'{'}p.price{'}'}</td>
-                  <td className="text-end"><button className="btn btn-sm btn-outline-danger" onClick={()=>removeItem(p.id)}>Eliminar</button></td>
+                  <td className="text-end">
+                    <button className="btn btn-sm btn-outline-primary me-2" onClick={()=>editItem(p)}>Editar</button>
+                    <button className="btn btn-sm btn-outline-danger" onClick={()=>removeItem(p.id)}>Eliminar</button>
+                  </td>
                 </tr>
               ))}
             </tbody>
