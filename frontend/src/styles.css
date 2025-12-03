@@ -1,0 +1,21 @@
+:root {
+  --brand: #a72693;
+  --brand-2: #f72585;
+  --accent: #b5179e;
+  --bg: #fff8fb;
+  --text: #2b2d42;
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+h1 {
+  color: var(--brand);
+}
+.btn-brand {
+  background: var(--brand);
+  color: white;
+}
+.btn-brand:hover {
+  background: var(--accent);
+}
