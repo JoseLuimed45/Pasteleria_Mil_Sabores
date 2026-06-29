@@ -1,0 +1,52 @@
+version: "1.0"
+project: "SAP Validator"
+status: "Regularization Phase"
+tasks:
+  - id: TDD-001
+    title: "Setup de Infraestructura Testing"
+    description: "Instalar Jest, React Testing Library y configurar el entorno de pruebas en el folder Producto."
+    status: done
+    assigned_to: Developer
+    tags: [testing, infra]
+    
+  - id: TDD-002
+    title: "Unit Tests: Import Service"
+    description: "Alcanzar 80% de cobertura en src/lib/import-service.ts validando el parseo de fechas y chunking de Supabase."
+    status: done
+    assigned_to: Developer
+    tags: [testing, backend]
+
+  - id: UI-001
+    title: "Unit Tests: ImportsView"
+    description: "Crear pruebas unitarias para simular la carga de archivos Excel en el componente ImportsView."
+    status: done
+    assigned_to: Developer
+    tags: [testing, frontend]
+
+  - id: SEC-001
+    title: "Hotfix: Autenticación y RBAC"
+    description: "Remover bypasses hardcodeados de email en el frontend y usar variables de entorno/DB real."
+    status: done
+    assigned_to: Developer
+    tags: [security, backend]
+
+  - id: SEC-002
+    title: "Fix Supabase RLS Recursion"
+    description: "Ejecutar script SQL con SECURITY DEFINER para solucionar el bucle infinito 42P17 en profiles."
+    status: done
+    assigned_to: User
+    tags: [database, infrastructure]
+
+  - id: SEC-003
+    title: "Hardening de RLS en Inventario"
+    description: "Eliminación de política USING(true) e implementación de validación RBAC estricta (SUPER_ADMIN, SUPERVISOR) validada vía pgTAP."
+    status: done
+    assigned_to: Developer
+    tags: [security, rls, database]
+
+  - id: QA-001
+    title: "Suite de Validación Final (EP3)"
+    description: "Ejecución de 18 pruebas Jest, 3 pruebas Playwright (E2E) y 1 prueba pgTAP, logrando 100% de cobertura en flujos críticos. Push exitoso a producción."
+    status: done
+    assigned_to: Developer
+    tags: [testing, qa, release]

@@ -1,0 +1,23 @@
+{
+  "project_id": "PROJ-Pasteleria_Mil_Sabores",
+  "version": "1.0.0",
+  "framework": "Next.js",
+  "type": "Web Application",
+  "pipeline_compliance": {
+    "prd_exists": true,
+    "sad_exists": true,
+    "tdd_coverage_enforced": false,
+    "automated_deploy": false
+  },
+  "agents_assigned": [
+    "00_Zenith",
+    "01_Analista_Requisitos",
+    "02_Disenador_Tecnico",
+    "03_Programador"
+  ],
+  "entrypoint": "Producto/src/app/page.tsx",
+  "testing": {
+    "framework": "jest",
+    "target_coverage": 80
+  }
+}
